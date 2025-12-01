@@ -1,0 +1,304 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and HTML settings */
+html, body {
+  height: 100%; /* Ensures the body takes full height */
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height to push footer to bottom */
+}
+
+/* SUCCESS AND ERROR MESSAGES */
+.success{
+  width: 100%;
+  background-color: lightseagreen;
+  padding: 20px;
+  color: white;
+  border: none;
+}
+
+.error{
+  width: 100%;
+  background-color: red;
+  padding: 20px;
+  color: white;
+  border: none;
+}
+
+
+/* Main content area */
+.main-content {
+  flex: 1; /* Allows the content to expand and fill remaining space */
+  padding: 2%;
+  background-color: #f1f2f4;
+}
+
+/* Container for menu */
+.menu {
+  margin: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Styling for logo and left-hand section */
+.left-hand, img {
+  width: 9em;
+}
+
+/* Menu styling */
+ul {
+  display: flex;
+  gap: 2.5em;
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ff6b81;
+}
+
+ul li a:hover {
+  color: #ff4757;
+  transition: all 0.5s ease;
+}
+
+.right-hand {
+  padding-right: 6em;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #ff4757;
+  color: white;
+  text-align: center;
+  padding: 0.3em;
+  margin-top: auto; /* Pushes the footer to the bottom of the page */
+}
+
+.developer {
+  color: blue;
+  font-size: 14px;
+}
+
+/* Table styles */
+.tbl-full {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.tbl-full th, .tbl-full td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.tbl-full th {
+  background-color: #f3f3f3;
+  color: #333;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.tbl-full tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tbl-full tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tbl-full td {
+  color: #333;
+  font-size: 16px;
+}
+
+/* Action buttons styling */
+.update-btn, .delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.update-btn {
+  margin-right: 5px;
+}
+
+.action-icons {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Styling for action icons */
+.action-icon {
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tooltip for icons */
+.action-icon .tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 125%;
+  background-color: rgba(5, 160, 232, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Show tooltip on hover */
+.action-icon:hover .tooltip {
+  display: block;
+}
+
+/* Tooltip icon hover effect */
+.action-icon:hover i {
+  color: #007bff;
+}
+
+/* Add admin button styling */
+.add-btn {
+  padding: 10px 20px;
+  background-color: gold;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-btn .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: rgba(5, 160, 232, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 30px 0px;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.add-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Form styling */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 4rem;
+}
+
+/* Input field styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input{
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+/* Submit button styling */
+.submit-btn {
+  width: 50%;
+  padding: 12px;
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2575fc;
+}
+
+
+/* Dashboard Box Grid Layout */
+.cols {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns by default */
+  gap: 12px;
+}
+
+.col-4 {
+  background-color: white;
+  padding: 70px 45px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.col-4 h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .cols {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .cols {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+}
